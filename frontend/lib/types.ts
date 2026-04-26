@@ -97,6 +97,19 @@ export interface LapTimeComparisonResponse {
   series: LapTimeSeriesPoint[];
 }
 
+export interface DriverSeasonStats {
+  driver: string;
+  year: number;
+  avg_finish: number | null;
+  points_per_race: number;
+  dnf_count: number;
+  fastest_laps: number;
+  head_to_head_vs_teammate: {
+    wins: number;
+    losses: number;
+  };
+}
+
 export interface DashboardData {
   schedule: ScheduleItem[];
   drivers: StandingEntry[];
